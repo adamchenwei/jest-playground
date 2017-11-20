@@ -5,12 +5,19 @@
   "dependencies": {
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
-    "react-scripts": "1.0.17"
+    "react-scripts": "1.0.17",
+    "styled-components": "^2.2.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test": "jest --coverage --config jest.json",
+    "test:watch": "npm run test -- --watch",
+    "test:updateSnapshot": "jest --config jest.json --updateSnapshot"
+  },
+  "devDependencies": {
+    "jest": "^21.2.1",
+    "react-test-renderer": "^16.1.1"
   }
 }

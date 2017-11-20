@@ -1,8 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import App from './App';
+import renderer from 'react-test-renderer';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
+it('renders correctly', () => {
+  console.log('----------------------App');
+  console.log(App);
+  const tree = renderer.create(
+    <App />
+  ).toJSON();
+  console.log('-----_TREEEEE')
+  console.log(tree);
+  expect(tree).toMatchSnapshot();
 });
