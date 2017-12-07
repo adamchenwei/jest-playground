@@ -45,7 +45,7 @@
     "test": "./node_modules/jest/bin/jest.js --coverage --config jest.json",
     "test:watch": "npm run test -- --watch",
     "test:updateSnapshot": "./node_modules/jest/bin/jest.js --config jest.json --updateSnapshot",
-    "test:2": "NODE_ENV=test jest --coverage --config jest.json"
+    "test:once": "NODE_ENV=test jest --coverage --config jest.json"
   },
   "devDependencies": {
     "babel-preset-env": "^1.6.1",
