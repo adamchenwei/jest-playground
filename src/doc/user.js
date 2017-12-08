@@ -1,7 +1,9 @@
+// Copyright 2004-present Facebook. All Rights Reserved.
+
 import request from './request';
 
 export function getUserName(userID) {
-  console.log('where is request')
-  console.log(request)
+  console.log('inside actual user');
+  console.log(request.toString());
   return request('/users/' + userID).then(user => user.name);
 }
