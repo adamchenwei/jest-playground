@@ -1,9 +1,9 @@
 // Copyright 2004-present Facebook. All Rights Reserved.
 
 'use strict';
-jest.mock('./request');
+jest.mock('../doc/request');
 
-import * as user from './user';
+import * as user from './../doc/user';
 
 // Testing promise can be done using `.resolves`.
 test('works with resolves', () => {
@@ -11,4 +11,5 @@ test('works with resolves', () => {
   console.log(user.getUserName.toString());
   expect.assertions(1);
   return expect(user.getUserName(5)).resolves.toEqual('Paul');
+
 });
